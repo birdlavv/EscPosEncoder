@@ -1,19 +1,22 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
+import nativePlugin from 'rollup-plugin-natives';
 
 export default [
 
 	// Browser-friendly UMD build
 	{
 		input: 'src/esc-pos-encoder.js',
-		external: ['skia-canvas'],
 		output: {
 			name: 'EscPosEncoder',
 			file: 'dist/esc-pos-encoder.umd.js',
 			format: 'umd'
 		},
 		plugins: [
+			nativePlugin({
+				copyTo: 'dist'
+			}),
 			resolve({ browser: true }), 
 			commonjs(),
             terser()
@@ -23,12 +26,14 @@ export default [
 	// Browser-friendly ES module build
 	{
 		input: 'src/esc-pos-encoder.js',
-		external: ['skia-canvas'],
 		output: { 
 			file: 'dist/esc-pos-encoder.esm.js', 
 			format: 'es' 
 		},
 		plugins: [
+			nativePlugin({
+				copyTo: 'dist'
+			}),
 			resolve({ browser: true }), 
 			commonjs(),
             terser()
