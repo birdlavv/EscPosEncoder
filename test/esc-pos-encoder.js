@@ -1,5 +1,5 @@
 import EscPosEncoder from '../src/esc-pos-encoder.js';
-import { createCanvas } from 'canvas';
+import { Canvas } from 'skia-canvas';
 import { assert, expect } from 'chai';
 
 
@@ -216,7 +216,7 @@ describe('EscPosEncoder', function() {
     });
 
     describe('image(canvas, 8, 8) - with a black pixel at 0,0 (legacy)', function () {
-        let canvas = createCanvas(8, 8);
+        let canvas = new Canvas(8, 8);
         let context = canvas.getContext('2d');
         context.fillStyle = 'rgba(0, 0, 0, 1)';
         context.fillRect( 0, 0, 1, 1 );
@@ -229,7 +229,7 @@ describe('EscPosEncoder', function() {
     });
 
     describe('image(canvas, 8, 8) - with a black pixel at 0,0', function () {
-        let canvas = createCanvas(8, 8);
+        let canvas = new Canvas(8, 8);
         let context = canvas.getContext('2d');
         context.fillStyle = 'rgba(0, 0, 0, 1)';
         context.fillRect( 0, 0, 1, 1 );
