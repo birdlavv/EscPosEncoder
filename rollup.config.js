@@ -7,6 +7,7 @@ export default [
 	// Browser-friendly UMD build
 	{
 		input: 'src/esc-pos-encoder.js',
+		external: ['skia-canvas'],
 		output: {
 			name: 'EscPosEncoder',
 			file: 'dist/esc-pos-encoder.umd.js',
@@ -22,6 +23,7 @@ export default [
 	// Browser-friendly ES module build
 	{
 		input: 'src/esc-pos-encoder.js',
+		external: ['skia-canvas'],
 		output: { 
 			file: 'dist/esc-pos-encoder.esm.js', 
 			format: 'es' 
