@@ -1,5 +1,5 @@
 import linewrap from 'linewrap';
-import {Canvas} from 'skia-canvas';
+import {Canvas} from '@napi-rs/canvas';
 import Dither from 'canvas-dither';
 import Flatten from 'canvas-flatten';
 import CodepageEncoder from 'codepage-encoder';

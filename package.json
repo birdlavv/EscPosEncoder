@@ -1,6 +1,6 @@
 {
   "name": "@orderdive/esc-pos-encoder",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Create a set of commands that can be send to any receipt printer that supports ESC/POS",
   "type": "module",
   "exports": {
@@ -52,7 +52,7 @@
     "canvas-flatten": "^1.0.1",
     "codepage-encoder": "^2.0.4",
     "linewrap": "^0.2.1",
-    "skia-canvas": "^1.0.1"
+    "@napi-rs/canvas": "^0.1.41"
   },
   "files": [
     "dist"

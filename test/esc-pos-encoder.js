@@ -1,5 +1,5 @@
 import EscPosEncoder from '../src/esc-pos-encoder.js';
-import { Canvas } from 'skia-canvas';
+import { Canvas } from '@napi-rs/canvas';
 import { assert, expect } from 'chai';
 
 
